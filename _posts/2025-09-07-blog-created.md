@@ -1,12 +1,13 @@
 ---
 title: "Blog Created 🎉"
 date: 2025-09-07 12:00:00 +0330
-last_modified_at: 2025-09-07 12:00:00 +0330
+last_modified_at: 2025-09-07T12:00:00+03:30
 categories:
   - Blog
 tags:
   - announcement
   - first-post
+layout: post
 ---
 
 Hey everyone 👋
