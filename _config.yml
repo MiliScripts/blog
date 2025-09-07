@@ -25,9 +25,8 @@ github_username: username
 minimal_mistakes_skin: default
 search: true
 
-url: "https://miladlfarzian.github.io"
-baseurl: "/blog"
-
+url: "https://blog.imili.ir"
+baseurl: ""
 
 # Build settings
 markdown: kramdown
