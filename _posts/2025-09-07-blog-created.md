@@ -6,7 +6,6 @@ categories:
 tags:
   - announcement
   - first-post
-layout: post
 ---
 
 Hey everyone 👋
