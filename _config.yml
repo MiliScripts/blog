@@ -2,7 +2,7 @@
 title: "Mili's Blog"
 email: "milaad.farzian@gmail.com"
 description: >-
-  Notes, experiments, and projects by Miliad Farzian — 
+  Notes, experiments, and projects by milad Farzian — 
   a 23-year-old backend developer exploring Python, Django, FastAPI, Redis, 
   and building side projects with Cloudflare, Telegram, and beyond.
 twitter_username: ""
@@ -35,7 +35,7 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Miliad Farzian"
+  name   : "milad Farzian"
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "Backend developer (Python/FastAPI/Django). I build tools, blogs, bots, and experiments — learning in public."
   links:
