@@ -1,0 +1,9 @@
+nav:
+  posts: "نوشته‌ها"
+  categories: "دسته‌بندی‌ها"
+  tags: "برچسب‌ها"
+  about: "درباره من"
+
+footer:
+  made_with: "ساخته شده با"
+  by: "توسط"

@@ -1,0 +1,72 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    {% if site.seo.title %}
+      <title>{{ site.seo.title }}</title>
+    {% else %}
+      <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    {% endif %}
+  
+    {% if site.author %}
+      <meta name="author" content="{{ site.author.name }}">
+    {% endif %}
+  
+    {% if page.excerpt %}
+      <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
+    {% else %}
+      <meta name="description" content="{{ site.description }}">
+    {% endif %}
+  
+    {% if page.keywords %}
+      <meta name="keywords" content="{{ page.keywords }}">
+    {% else if site.keywords %}
+      <meta name="keywords" content="{{ site.keywords }}">
+    {% endif %}
+  
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.url }}/assets/images/bio-photo.jpg{% endif %}">
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:site_name" content="{{ site.title }}">
+  
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ site.twitter_username }}">
+    <meta name="twitter:creator" content="@{{ site.twitter_username }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.url }}/assets/images/bio-photo.jpg{% endif %}">
+  
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{ page.title }}",
+      "description": "{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ site.author.name }}"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "{{ site.author.name }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}/assets/images/bio-photo.jpg"
+        }
+      },
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "image": "{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.url }}/assets/images/bio-photo.jpg{% endif %}"
+    }
+    </script>
+    {% include head-custom.html %}
+  
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  
+    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
+  
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  </head>

@@ -1,4 +1,3 @@
-# Site settings
 title: "Mili's Blog"
 email: "milaad.farzian@gmail.com"
 description: >-
@@ -14,7 +13,6 @@ search: true
 url: "https://blog.imili.ir"
 baseurl: ""
 
-# Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/
@@ -25,7 +23,6 @@ timezone: Asia/Tehran
 include:
   - _pages
 
-# Plugins
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -33,6 +30,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-seo-tag
 
 author:
   name   : "milad Farzian"
@@ -93,3 +91,17 @@ tag_archive:
   path: /tags/
 
 future: true
+
+seo:
+  title: "Mili's Blog - Python Backend Development & Projects | میلاد فرضیان"
+  description: "Notes, experiments, and projects by Milad Farzian (میلاد فرضیان) - Python, Django, FastAPI, Redis, Cloudflare, and Telegram bots. وبلاگ میلاد فرضیان"
+
+keywords: "milad farzian, میلاد فرضیان, python, django, fastapi, backend development, redis, cloudflare, telegram bots, programming, web development, برنامه نویس پایتون, دولوپر بک اند"
+
+google_analytics: "G-XXXXXXXXXX"
+
+social:
+  share_image: "/assets/images/social-share.jpg"
+
+lang: "en"
+locale: "en_US"
